@@ -1,5 +1,4 @@
-pipeline {
-    agent any
+node ('Docker-Slave') {
 	def releasescript   =  'release.sh'
     stages {
         stage('Build') {
