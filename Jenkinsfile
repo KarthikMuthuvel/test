@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
 				sh "git tag 2.0"
-				echo 'Added tag..'
+				echo 'Added a tag..'
             }
         }
         stage('Test') {
