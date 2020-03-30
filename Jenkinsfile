@@ -4,13 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+		    sh "chmod +x release.sh"
+			sh "release.sh"
+			echo 'Added a tag..'
             }
-		try {sh "chmod +x release.sh"
-		sh "./release.sh"
-		echo 'Added a tag..'
-		} 
-    		catch (err) 
-    		{echo "TEST CASES FAILED"}
         }
         stage('Test') {
             steps {
