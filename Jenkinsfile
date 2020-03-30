@@ -1,11 +1,12 @@
 pipeline {
     agent any
-	
+	def releasescript   =  'release.sh'
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh "release.sh"
+		    		sh "chmod +x $releasescript"
+				sh "./$releasescript"
 				echo 'Added a tag..'
             }
         }
