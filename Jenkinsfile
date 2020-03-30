@@ -3,11 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+		    script{
                 echo 'Building..'
-		    sh "chmod +x release.sh"
-			sh "release.sh"
-			echo 'Added a tag..'
-            }
+		def releasescript = 'release.sh'
+		sh "chmod +x $releasescript"
+		sh "./$releasescript"
+		echo 'Added a tag..'
+		    }
+		    }
         }
         stage('Test') {
             steps {
