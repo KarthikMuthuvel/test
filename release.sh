@@ -8,7 +8,7 @@
 
   # If it's not a dry run, let's go!
   # 3) Add git tag
-  echo "Add git tag v$next_version with message: $msg"
+  echo "Add git tag"
   git tag -a "v3.0" -m "msg"
 
   # 4) Push the new tag
