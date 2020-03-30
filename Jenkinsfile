@@ -5,8 +5,8 @@ pipeline {
             steps {
 		    script{
                 echo 'Building..'
-		sh "git tag -a 'v3.0' -m 'msg'"
-		sh "git push --tags origin master"
+		def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim() as Integer
+                println("disk_size = ${disk_size}")
 		echo 'Added a tag..'
 		    }
 		    }
