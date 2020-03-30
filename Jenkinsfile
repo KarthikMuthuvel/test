@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh "git tag 2.0"
+				sh "./release.sh"
 				echo 'Added a tag..'
             }
         }
