@@ -1,11 +1,11 @@
-node ('Docker-Slave') {
-	def releasescript   =  'release.sh'
+pipeline {
+    agent any
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-		    		sh "chmod +x $releasescript"
-				sh "./$releasescript"
+		    		sh "chmod +x release.sh"
+				sh "./release.sh"
 				echo 'Added a tag..'
             }
         }
