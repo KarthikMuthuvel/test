@@ -5,9 +5,8 @@ pipeline {
             steps {
 		    script{
                 echo 'Building..'
-		def releasescript = 'release.sh'
-		sh "chmod +x $releasescript"
-		sh "./$releasescript"
+		sh "git tag -a 'v3.0' -m 'msg'"
+		sh "git push --tags origin master"
 		echo 'Added a tag..'
 		    }
 		    }
