@@ -1,0 +1,39 @@
+{
+	"ComplianceByConfigRules": [{
+		"ConfigRuleName": "access-keys-rotated",
+		"Compliance": {
+			"ComplianceType": "NON_COMPLIANT",
+			"ComplianceContributorCount": {
+				"CappedCount": 7,
+				"CapExceeded": false
+			}
+		}
+	}, {
+		"ConfigRuleName": "cloudformation-stack-drift-detection-check",
+		"Compliance": {
+			"ComplianceType": "NON_COMPLIANT",
+			"ComplianceContributorCount": {
+				"CappedCount": 25,
+				"CapExceeded": true
+			}
+		}
+	}, {
+		"ConfigRuleName": "dynamodb-in-backup-plan",
+		"Compliance": {
+			"ComplianceType": "NON_COMPLIANT",
+			"ComplianceContributorCount": {
+				"CappedCount": 15,
+				"CapExceeded": false
+			}
+		}
+	}, {
+		"ConfigRuleName": "s3-bucket-server-side-encryption-enabled",
+		"Compliance": {
+			"ComplianceType": "NON_COMPLIANT",
+			"ComplianceContributorCount": {
+				"CappedCount": 4,
+				"CapExceeded": false
+			}
+		}
+	}]
+}
